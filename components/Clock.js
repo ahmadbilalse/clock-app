@@ -24,7 +24,7 @@ export default function Clock(props) {
       <p className="tracking-widest flex uppercase">
         <span className="mr-2">{getIcon()}</span>
         GOOD {greeting}, IT'S</p>
-      <p className="font-semibold text-7xl my-2 sm:text-big lg:text-biggest">{time}<span className="font-normal text-base align-baseline ml-2 sm:text-4xl">{abbreviation}</span></p>
+      <p className="font-extrabold text-7xl my-2 sm:text-big lg:text-biggest">{time}<span className="font-normal text-base align-baseline ml-2 sm:text-4xl">{abbreviation}</span></p>
       <p className="font-semibold tracking-widest uppercase">IN {region}, {country}</p>
     </div>
   )

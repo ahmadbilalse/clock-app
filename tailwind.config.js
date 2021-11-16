@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Inter: ["Inter", "sans-serif"],
+        Lato: ["Lato", "sans-serif"],
       },
       fontSize: {
         'big': '10rem',
@@ -14,7 +15,7 @@ module.exports = {
       backgroundImage: {
         'morning': "url('/morning.jpg')",
         'afternoon': "url('/afternoon.jpg')",
-        'evening': "url('/night.jpg')",
+        'evening': "url('/evening.jpg')",
         'night': "url('/night.jpg')",
       },
       animation: {

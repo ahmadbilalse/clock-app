@@ -10,10 +10,11 @@ export default function Home() {
   const geoData = useGeoInfo();
 
   return (
-    <div className={classNames("min-h-screen p-8 font-Inter text-white md:p-16 bg-black bg-opacity-50 bg-cover bg-center bg-blend-overlay flex flex-col justify-between", {
+    <div className={classNames("min-h-screen p-8 font-Lato text-white md:p-16 bg-black bg-opacity-50 bg-cover bg-center bg-blend-overlay flex flex-col justify-between", {
       "bg-morning": timeData?.greeting === timeOfDay.morning,
       "bg-afternoon": timeData?.greeting === timeOfDay.afternoon,
-      "bg-night": timeData?.greeting === timeOfDay.evening || timeData?.greeting === timeOfDay.night,
+      "bg-evening": timeData?.greeting === timeOfDay.evening,
+      "bg-night": timeData?.greeting === timeOfDay.night,
     })}>
       <Head>
         <title>Clock App</title>
