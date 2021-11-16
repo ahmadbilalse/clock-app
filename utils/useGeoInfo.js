@@ -5,7 +5,7 @@ const useGeoInfo = () => {
   const [geoData, setGeoData] = useState();
 
   const fetchGeo = async () => {
-    const result = await axios('http://ipwhois.app/json/');
+    const result = await axios('https://ipwhois.app/json/');
     setGeoData(result.data);
   }
 
