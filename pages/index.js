@@ -1,20 +1,30 @@
+import classNames from 'classnames'
 import Head from 'next/head'
 import Clock from '../components/Clock'
 import Quote from '../components/Quote'
+import useGeoInfo from '../utils/useGeoInfo'
+import useTimeInfo, { timeOfDay } from '../utils/useTimeInfo'
 
 export default function Home() {
+  const timeData = useTimeInfo();
+  const geoData = useGeoInfo();
+
   return (
-    <div className="min-h-screen p-8 font-Inter text-white md:p-16
-      bg-black bg-opacity-50
-      bg-day bg-cover bg-center bg-blend-overlay
-      flex flex-col justify-between">
+    <div className={classNames("min-h-screen p-8 font-Inter text-white md:p-16 bg-black bg-opacity-50 bg-cover bg-center bg-blend-overlay flex flex-col justify-between", {
+      "bg-morning": timeData?.greeting === timeOfDay.morning,
+      "bg-afternoon": timeData?.greeting === timeOfDay.afternoon,
+      "bg-night": timeData?.greeting === timeOfDay.evening || timeData?.greeting === timeOfDay.night,
+    })}>
       <Head>
         <title>Clock App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Quote />
-      <Clock />
+      <Clock data={{
+        geoData,
+        timeData,
+      }} />
     </div>
   )
 }

@@ -12,8 +12,10 @@ module.exports = {
         'biggest': '12rem',
       },
       backgroundImage: {
-        'day': "url('/day.jpg')",
-        'valley': "url('/valley.png')",
+        'morning': "url('/morning.jpg')",
+        'afternoon': "url('/afternoon.jpg')",
+        'evening': "url('/night.jpg')",
+        'night': "url('/night.jpg')",
       },
       animation: {
         'reverse-spin': 'reverse-spin 1s linear infinite'
