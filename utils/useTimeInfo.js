@@ -34,7 +34,7 @@ const useTimeInfo = () => {
       minutes,
       time: `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`
     });
-    const result = await axios('http://worldtimeapi.org/api/ip');
+    const result = await axios('https://worldtimeapi.org/api/ip');
     date = new Date(result.data.datetime);
     hours = date.getHours();
     minutes = date.getMinutes();
