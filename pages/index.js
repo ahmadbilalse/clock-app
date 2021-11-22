@@ -1,9 +1,11 @@
 import classNames from 'classnames'
 import Head from 'next/head'
 import Clock from '../components/Clock'
+import GithubLink from '../components/GithubLink'
 import Quote from '../components/Quote'
 import useGeoInfo from '../utils/useGeoInfo'
 import useTimeInfo, { timeOfDay } from '../utils/useTimeInfo'
+
 
 export default function Home() {
   const timeData = useTimeInfo();
@@ -22,10 +24,15 @@ export default function Home() {
       </Head>
 
       <Quote />
-      <Clock data={{
-        geoData,
-        timeData,
-      }} />
+      <div>
+        <Clock data={{
+          geoData,
+          timeData,
+        }} />
+        <div className="mt-4">
+          <GithubLink />
+        </div>
+      </div>
     </div>
   )
 }
